@@ -10,7 +10,7 @@ pipeline {
 
   stages {
 
-    stage('Clone') {
+    stage('Clone the github code') {
       steps {
         checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/devopscloudworld/example-voting-app.git']])
       }
